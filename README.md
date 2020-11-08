@@ -1,4 +1,4 @@
-# Hello this is a sample project gor Git Hub session
+# Hello this is a sample project for Git Hub session
 
 ## Project 1 - Git
 
