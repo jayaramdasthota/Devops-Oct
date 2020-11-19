@@ -1,9 +1,21 @@
 pipeline {
-    agent any
+    agent {label 'slave1'}
+
     stages {
-        stage('build') {
+        stage('Getting system ready') {
             steps {
-                sh 'git status'
+               echo  '**********   Installing Git   **********'
+                sh 'yum install git -y'
+                sh 'who'
+                sh 'uptime'
+            }
+        }
+        stage('SystemInfo') {
+            steps {
+                echo  '**********   Welcome to jenkins Declarative Pipeline   **********'
+                sh 'whoami'
+                sh 'who'
+                sh 'uptime'
             }
         }
     }
